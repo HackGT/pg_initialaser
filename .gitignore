@@ -1,0 +1,12 @@
+# Editors
+.vscode/
+*.swp
+.#*
+
+# Ruby
+.travis.d/.bundle
+.travis.d/Gemfile.lock
+.travis.d/vendor
+
+# Misc
+.DS_Store
