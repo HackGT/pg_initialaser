@@ -10,12 +10,11 @@ access to the created database). It also does not have a password.
 
 ## Environment variables
 
-| Name     | Description                                                            |
-| ----     | -----------                                                            |
-| PGHOST   | (connection option) Postgres host                                      |
-| PGUSER   | (connection option) Postgres admin user                                |
-| USERNAME | Username for the user to be created                                    |
-| DBNAME   | Name for the database to be created (owner is set to the created user) |
+| Name         | Description                                                                                  |
+| ----         | -----------                                                                                  |
+| POSTGRES_URL | (connection option) Connection string for the Postgres server. This should be an admin user. |
+| USERNAME     | Username for the user to be created                                                          |
+| DBNAME       | Name for the database to be created (owner is set to the created user)                       |
 
 ## Background
 
