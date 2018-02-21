@@ -5,6 +5,9 @@ and database on a given host specified in environment variables.
 Realtalk: this project is a 2 line script that runs `CREATE USER` and
 `CREATE DATABASE`.
 
+**Note:** The user that is created has severely restricted permissions (only has
+access to the created database). It also does not have a password.
+
 ## Environment variables
 
 | Name     | Description                                                            |
