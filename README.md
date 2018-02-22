@@ -1,7 +1,7 @@
 # pg_initialaser [![Build Status](https://travis-ci.org/HackGT/pg_initialaser.svg?branch=master)](https://travis-ci.org/HackGT/pg_initialaser)
 
-Simple script packaged into a Docker container that creates a Postgres user
-and database on a given host specified in environment variables.
+A simple script packaged into a Docker container that creates idempotent-ly
+a Postgres user and database on a given host specified in environment variables.
 Realtalk: this project is a 2 line script that runs `CREATE USER` and
 `CREATE DATABASE`.
 
@@ -15,6 +15,12 @@ access to the created database). It also does not have a password.
 | POSTGRES_URL | (connection option) Connection string for the Postgres server. This should be an admin user. |
 | USERNAME     | Username for the user to be created                                                          |
 | DBNAME       | Name for the database to be created (owner is set to the created user)                       |
+
+## Exit Codes
+
+`pg_initializer` will only exit with an error code (exit code != 0) when `psql`
+has issues connecting to the database. `psql` does not error when SQL errors are
+encountered, making the containized utility idempotent.
 
 ## Background
 
