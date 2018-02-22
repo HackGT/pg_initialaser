@@ -10,12 +10,10 @@ services:
 script: |
   .travis.d/build.sh &&
   cd .travis.d &&
-  bundle install --gemfile=Gemfile --path vendor/bundle &&
-  BUNDLE_GEMFILE=Gemfile bundle exec ruby pr_autodeploy.rb
+  bundle install --gemfile=Gemfile --path vendor/bundle
 
 env:
   global:
     - HACKGPROJECT_REV="111686e4984dd099b2c109a3e2a08669f708072e"
 
     - DOCKER_ID_USER="hackgt"
-
